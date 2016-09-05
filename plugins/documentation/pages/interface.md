@@ -1,5 +1,18 @@
+# Interface
+
+- [Wartung](#wartung)
+    - [Aktionen](#wartung-aktionen)
+- [Einstellungen](#einstellungen)
+    - [Suchmodus](#einstellungen-suchmodus)
+    - [Suchergebnis](#einstellungen-suchergebnis)
+    - [Quelle](#einstellungen-quelle)
+- [Plaintext](#plaintext)
+- [Search Highlighter](#search_highlighter)
+
+<a name="wartung"></a>
 # Wartung
 
+<a name="wartung-aktionen"></a>
 ## Aktionen
 
 Aktion | Erläuterung
@@ -10,8 +23,10 @@ Suchcache löschen | Wenn eine Neuindexierung nicht erforderlich ist, kann auch 
 Keyword-Index leeren | Löscht alle Keywords, die bei der Indexierung oder über Suchanfragen gesammelt wurden. Diese Keywords werden unter anderem für die Ähnlichkeitssuche gebraucht und sollten nicht gelöscht werden.
 Statistik löschen | Achtung, das Löschen der Statistik kann nicht rückgängig gemacht werden.
 
+<a name="einstellungen"></a>
 # Einstellungen
 
+<a name="einstellungen-suchmodus"></a>
 ## Suchmodus
 
 ### Suchmodi
@@ -62,7 +77,7 @@ Offline-Artikel indexieren | ###Alex###
 Artikel (ADD, EDIT, DELETE) automatisch (de)indexieren | ###Alex###
 Extension Point `"OUTPUT_FILTER"` aufrufen | ###Alex###
 
-
+<a name="einstellungen-suchergebnis"></a>
 ## Suchergebnis
 
 ### Erscheinungsbild des Highlight-Texts
@@ -95,6 +110,7 @@ Wörter (kommaseperiert) | ###Alex###
 Artikel | ###Alex###
 Kategorien | ###Alex###
 
+<a name="einstellungen-quelle"></a>
 ## Quelle
 
 ### Datenbankspalten in die Suche einschließen
@@ -113,6 +129,7 @@ Verzeichnistiefe | ###Alex###
 Folgende Ordner in die Suche einschließen | ###Alex###
 Unterordner der Tiefe 0 auswählen | ###Alex###
 
+<a name="plaintext"></a>
 # Plaintext
 
 Option | Erläuterung
@@ -123,6 +140,7 @@ Textile parsen | ###Alex###
 HTML-Tags entfernen | ###Alex###
 Standard-Plaintext-Konvertierung durchführen | ###Alex###
 
+<a name="search_highlighter"></a>
 # Search Highlighter
 
 Option | Erläuterung
