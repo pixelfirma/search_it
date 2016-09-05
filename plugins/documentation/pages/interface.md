@@ -1,7 +1,6 @@
 # Interface
 
 - [Wartung](#wartung)
-    - [Aktionen](#wartung-aktionen)
 - [Einstellungen](#einstellungen)
     - [Suchmodus](#einstellungen-suchmodus)
     - [Suchergebnis](#einstellungen-suchergebnis)
@@ -12,16 +11,13 @@
 <a name="wartung"></a>
 # Wartung
 
-<a name="wartung-aktionen"></a>
-## Aktionen
-
 Aktion | Erläuterung
 ------ | ------
 Index vollständig erstellen | Die Index-Tabelle wird gelöscht und neu aufgebaut.
-Index schrittweise erstellen | Bei Problemen mit der maximalen Skriptlaufzeit (max_execution_time) kann der Index schrittweise erstellt werden.
+Index schrittweise erstellen | Führt die Indexierung in mehreren Schritten aus, um die Skriptlaufzeit (max_execution_time) gering zu halten. Artikel und Medien werden einzeln indexiert, Datenbankeinträge in 100er-Schriten.
 Suchcache löschen | Wenn eine Neuindexierung nicht erforderlich ist, kann auch ausschließlich der Cache gelöscht werden.
-Keyword-Index leeren | Löscht alle Keywords, die bei der Indexierung oder über Suchanfragen gesammelt wurden. Diese Keywords werden unter anderem für die Ähnlichkeitssuche gebraucht und sollten nicht gelöscht werden.
-Statistik löschen | Achtung, das Löschen der Statistik kann nicht rückgängig gemacht werden.
+Keyword-Index leeren | Löscht alle Keywords, die bei der Indexierung oder über Suchanfragen gesammelt wurden. Da diese Keywords z. B. für die Ähnlichkeitssuche gebraucht werden, sollten diese nur in Ausnahmefällen gelöscht werden.
+Statistik löschen | Setzt die Statistik zurück. Die Anzahl aller gesuchten Begriffe wird auf 0 gesetzt.
 
 <a name="einstellungen"></a>
 # Einstellungen
@@ -29,14 +25,20 @@ Statistik löschen | Achtung, das Löschen der Statistik kann nicht rückgängig
 <a name="einstellungen-suchmodus"></a>
 ## Suchmodus
 
+Dies sind die Standard-Einstellungen für jede Suche. 
+
+> Tipp: In den erweiterten Beispielen wird erklärt, wie das Suchobjekt mit eigenen Parametern überschrieben werden kann. So lassen sich mehrere Suchen in einer Website realisieren, bspw. eine Produktsuche oder eine Mitarbeiter-Suche.
+
 ### Suchmodi
 
 #### Logischer Suchmodus
 
+Wenn mehr als ein Begriff in das Suchfeld eingegeben wird, ...
+
 Option | Erläuterung
 ------ | ------
-`Konjunktive Suche (AND)` | ###Alex###
-`Disjunktive Suche (OR)` | ###Alex###
+`Konjunktive Suche (AND)` | ... müssen beide Begriffe vorhanden sein.
+`Disjunktive Suche (OR)` | ... genügt einer von beiden Begriffen.
 
 #### Textmodus
 
@@ -48,21 +50,25 @@ Durchsuche beides (HTML und Plain) | ###Alex###
 
 #### Ähnlichkeitssuche
 
+Bei der Ähnlichkeitssuche werden ähnliche Begriffe dem gesuchten Begriff zugeordnet. Gleichklingende bekommen dabei einen gleichen Code. Beispiele hierfür sind:
+* Tippfehler: `Standard` vs. `Standart`
+* Verwechslungen: `Maier` vs. `Meyer`
+
 Option | Erläuterung
 ------ | ------
-Deaktivieren | ###Alex###
-Soundex | ###Alex###
-Metaphone | ###Alex###
-Kölner Phonetik | ###Alex###
-Alle | ###Alex###
-Die Ähnlichkeitssuche auch dann durchführen, wenn Ergebnisse vorhanden sind? | ###Alex###
+Deaktivieren | Es werden nur exakte Treffer angezeigt.
+Soundex | Gleichklingende Wörter führen zu einem Treffer. Verwendet den Soundex-Algorithmus. 
+Metaphone | Gleichklingende Wörter führen zu einem Treffer. Metaphone eignet sich für englische Begriffe.
+Kölner Phonetik | Gleichklingende Wörter führen zu einem Treffer. Kölner Phonetik eignet sich für deutsche Begriffe.
+Alle | Überprüft Soundex, Metaphone und Kölner Phonetik nach Treffern.
+Die Ähnlichkeitssuche auch dann durchführen, wenn Ergebnisse vorhanden sind? | Ausschalten, um die Ähnlichkeitssuche nur dann zu aktivieren, wenn kein Suchergebnis gefunden wurde.
 
 #### MySQL-Suchmodus
 
 Option | Erläuterung
 ------ | ------
-LIKE (findet auch Teilwörter, aber langsamer) | ###Alex###
-MATCH AGAINST (findet nur ganze Wörter, schneller) | ###Alex###
+LIKE | findet auch Teilwörter, z.B. `Boot` in `Hausboot`, ist jedoch langsamer.
+MATCH AGAINST  | findet nur ganze Wörter, ist dafür schneller.
 
 ### Indexierung
 
