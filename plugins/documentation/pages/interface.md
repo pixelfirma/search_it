@@ -16,7 +16,7 @@ Statistik löschen | Achtung, das Löschen der Statistik kann nicht rückgängig
 
 ### Suchmodi
 
-### Logischer Suchmodus
+#### Logischer Suchmodus
 
 Option | Erläuterung
 ------ | ------
