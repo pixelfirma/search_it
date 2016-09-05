@@ -16,14 +16,14 @@ Statistik löschen | Achtung, das Löschen der Statistik kann nicht rückgängig
 
 ### Suchmodi
 
-->Logischer Suchmodus
+### Logischer Suchmodus
 
 Option | Erläuterung
 ------ | ------
 `Konjunktive Suche (AND)` | ###Alex###
 `Disjunktive Suche (OR)` | ###Alex###
 
-->Textmodus
+### Textmodus
 
 Option | Erläuterung
 ------ | ------
@@ -31,7 +31,7 @@ Durchsuche Text ohne HTML-Tags (Plain) | ###Alex###
 Durchsuche Text mit HTML-Tags (HTML) | ###Alex###
 Durchsuche beides (HTML und Plain) | ###Alex###
 
-->Ähnlichkeitssuche
+### Ähnlichkeitssuche
 
 Option | Erläuterung
 ------ | ------
@@ -40,15 +40,9 @@ Soundex | ###Alex###
 Metaphone | ###Alex###
 Kölner Phonetik | ###Alex###
 Alle | ###Alex###
+Die Ähnlichkeitssuche auch dann durchführen, wenn Ergebnisse vorhanden sind? | ###Alex###
 
-{Checkbox} Die Ähnlichkeitssuche auch dann durchführen, wenn Ergebnisse vorhanden sind?
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
-
-->MySQL-Suchmodus
+### MySQL-Suchmodus
 
 Option | Erläuterung
 ------ | ------
@@ -57,34 +51,17 @@ MATCH AGAINST (findet nur ganze Wörter, schneller) | ###Alex###
 
 ### Indexierung
 
-->Art und Weise
+### Art und Weise
 
 Option | Erläuterung
 ------ | ------
 Indexierung der Artikel über eine HTTP-GET-Anfrage | ###Alex###
 Indexierung der Artikel über den Redaxo-Cache (ohne Template, nur der Artikel) | ###Alex###
 Indexierung der Artikel über den Redaxo-Cache (mit Template, liefert das gleiche Ergebnis wie per HTTP-GET-Anfrage) | ###Alex###
+Offline-Artikel indexieren | ###Alex###
+Artikel (ADD, EDIT, DELETE) automatisch (de)indexieren | ###Alex###
+Extension Point `"OUTPUT_FILTER"` aufrufen | ###Alex###
 
-{Checkbox} Offline-Artikel indexieren
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
-
-{Checkbox} Artikel (ADD, EDIT, DELETE) automatisch (de)indexieren
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
-
-{Checkbox} Extension Point `"OUTPUT_FILTER"` aufrufen
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
 
 ## Suchergebnis
 
@@ -98,7 +75,7 @@ Maximale Trefferanzahl | ###Alex###
 Maximale Zeichenanzahl für Teaser | ###Alex###
 Maximale Zeichenanzahl um hervorgehobene Suchbegriffe herum | ###Alex###
 
-->Highlighttyp
+### Highlighttyp
 
 Option | Erläuterung
 ------ | ------
@@ -131,27 +108,9 @@ Datenbankname | ###Alex###
 Option | Erläuterung
 ------ | ------
 Dateiendungen (frei lassen für beliebige Dateien) | ###Alex###
-
-{Checkbox} Medienpool indexieren
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
-
-Option | Erläuterung
------- | ------
+Medienpool indexieren | ###Alex###
 Verzeichnistiefe | ###Alex###
-
-{Checkbox} Folgende Ordner in die Suche einschließen
-
-Option | Erläuterung
------- | ------
-Aktiv | ###Alex###
-Inaktiv | ###Alex###
-
-Option | Erläuterung
------- | ------
+Folgende Ordner in die Suche einschließen | ###Alex###
 Unterordner der Tiefe 0 auswählen | ###Alex###
 
 # Plaintext
