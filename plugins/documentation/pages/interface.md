@@ -23,7 +23,7 @@ Option | Erläuterung
 `Konjunktive Suche (AND)` | ###Alex###
 `Disjunktive Suche (OR)` | ###Alex###
 
-### Textmodus
+#### Textmodus
 
 Option | Erläuterung
 ------ | ------
@@ -31,7 +31,7 @@ Durchsuche Text ohne HTML-Tags (Plain) | ###Alex###
 Durchsuche Text mit HTML-Tags (HTML) | ###Alex###
 Durchsuche beides (HTML und Plain) | ###Alex###
 
-### Ähnlichkeitssuche
+#### Ähnlichkeitssuche
 
 Option | Erläuterung
 ------ | ------
@@ -42,7 +42,7 @@ Kölner Phonetik | ###Alex###
 Alle | ###Alex###
 Die Ähnlichkeitssuche auch dann durchführen, wenn Ergebnisse vorhanden sind? | ###Alex###
 
-### MySQL-Suchmodus
+#### MySQL-Suchmodus
 
 Option | Erläuterung
 ------ | ------
@@ -51,7 +51,7 @@ MATCH AGAINST (findet nur ganze Wörter, schneller) | ###Alex###
 
 ### Indexierung
 
-### Art und Weise
+#### Art und Weise
 
 Option | Erläuterung
 ------ | ------
